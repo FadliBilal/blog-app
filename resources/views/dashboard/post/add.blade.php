@@ -65,10 +65,13 @@
                                         <div class="form-group">
                                             <label for="category">Category</label>
                                             <select class="form-control" name="category" id="category" style="width: 100%;">
+                                                <option disabled selected>Pilih Kategori</option>
                                                 @foreach ($categories as $category)
-                                                <option value="{{ $category->id }}" {{ old("category") ? (old("category") == $category->id ? "selected" : "") : "" }}>{{ $category->title }}</option>
+                                                    <option value="{{ $category->id }}" {{ old("category") == $category->id ? "selected" : "" }}>
+                                                        {{ $category->title }}
+                                                    </option>
                                                 @endforeach
-                                            </select>
+                                            </select>                                            
                                         </div>
                                         <div class="form-group">
                                             <label for="tags">Tags</label>
@@ -97,11 +100,9 @@
                                         <div class="form-group">
                                             <label for="status">Status</label>
                                             <select class="form-control" name="status" id="status">
-                                                @if (auth()->user()->role != 1)
                                                 <option value="1">Publish</option>
-                                                @endif
                                                 <option value="0">Draft</option>
-                                            </select>
+                                            </select>                                            
                                         </div>
                                     </div>
                                 </div>

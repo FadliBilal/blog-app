@@ -35,12 +35,12 @@ class LoginController extends Controller
             Auth::login($user, $request->has("remember"));
 
             if ($user->google2fa_secret) {
-                session(['2fa_passed' => false]); // diset dulu supaya dicek di middleware
-                return redirect()->route('2fa.verify'); // arahkan ke halaman OTP
+                session(['2fa_passed' => false]); 
+                return redirect()->route('2fa.verify');
             }
 
             return redirect()->route("dashboard.home");
         }
-        return back()->withErrors("Your login credentials don't match!");
+        return back()->withErrors("Kredensial login Anda tidak cocok!");
     }
 }

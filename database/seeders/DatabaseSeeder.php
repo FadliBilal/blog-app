@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\SiteSetting::create([
-            "site_title" => "Laravel's Blog",
+            "site_title" => "Laravel Blog App",
             "tagline" => "Laravel Blog Project",
             "description" => "Laravel Blog Project - Maxy Academy Day 27",
             "copyright_text" => "© 2025, Fadli, All Rights Reserved.",

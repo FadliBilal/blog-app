@@ -98,9 +98,7 @@
                                         <div class="form-group">
                                             <label for="status">Status</label>
                                             <select class="form-control" name="status" id="status">
-                                                @if (auth()->user()->role != 1)
                                                 <option value="1" {{ $post->status ? "selected" : "" }}>Publish</option>
-                                                @endif
                                                 <option value="0" {{ !$post->status ? "selected" : "" }}>Draft</option>
                                             </select>
                                         </div>

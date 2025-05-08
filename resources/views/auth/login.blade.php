@@ -34,12 +34,14 @@
                             <div class="form-group">
                                 <button type="submit" class="btn-custom">Log In</button>
                             </div>
-                            <p class="form-group text-center">Don't have an account? <a href="{{ route('auth.signup') }}"
-                                    class="btn-link">Create One</a> </p>
+                            <a href="{{ route('auth.google') }}" class="btn btn-danger w-100 mb-3">
+                                <i class="fab fa-google"></i> Masuk dengan Google
+                            </a>
+                            <p class="form-group text-center">Belum Punya Akun? <a href="{{ route('auth.signup') }}"
+                                class="btn-link">Buat Sekarang</a> 
+                            </p>
                         </form>
-                        <a href="{{ route('auth.google') }}" class="btn btn-danger w-100 mb-3">
-                            <i class="fab fa-google"></i> Masuk dengan Google
-                        </a>
+
                     </div>
                 </div>
             </div>

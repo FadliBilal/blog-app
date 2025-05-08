@@ -32,8 +32,9 @@
                     </form>
                 @else
                     <div class="alert alert-warning">
-                        <p>2FA belum aktif. <a href="{{ route('2fa.setup') }}" class="btn btn-sm btn-primary">Aktifkan
-                                Sekarang</a></p>
+                        <p>2FA belum aktif. 
+                            <a href="{{ route('2fa.setup') }}" class="btn btn-sm btn-primary">Aktifkan Sekarang</a>
+                        </p>
                     </div>
                 @endif
 
